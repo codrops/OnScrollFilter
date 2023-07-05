@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>On-Scroll Filter Effects | Codrops</title>
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<meta name="author" content="Codrops" />
+		<link rel="shortcut icon" href="favicon.ico">
+		<link rel="stylesheet" href="https://use.typekit.net/qsy7khk.css">
+		<link rel="stylesheet" type="text/css" href="css/base.css" />
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+		<script>document.documentElement.className="js";var supportsCssVars=function(){var e,t=document.createElement("style");return t.innerHTML="root: { --tmp-var: bold; }",document.head.appendChild(t),e=!!(window.CSS&&window.CSS.supports&&window.CSS.supports("font-weight","var(--tmp-var)")),t.parentNode.removeChild(t),e};supportsCssVars()||alert("Please view this demo in a modern browser that supports CSS Variables.");</script>
+		<script src="//tympanus.net/codrops/adpacks/analytics.js"></script>
+	</head>
+	<body class="loading">
+		<main>
+			<div class="frame">
+				<a class="frame__back" href="https://tympanus.net/codrops/?p=72802">Back to the article</a>
+				<a class="frame__prev" href="https://tympanus.net/Tutorials/WebGLBulge/">Previous demo</a>
+			</div>
+			<div class="intro"> 
+				<h1 class="intro__title"> 
+					<span class="intro__title-pre">On-Scroll Filter Effect</span> 
+					<span class="intro__title-sub">Based on <a href="https://codepen.io/supah/pen/poxmKPQ">this demo</a> by Fabio Ottaviani</span> 
+				</h1> 
+				<span class="intro__info">Scroll moderately to fully experience the animations</span> 
+			</div>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="title-wrap">
+						<span class="title title--up">Foot</span>
+						<span class="title title--down">Print</span>
+					</div>
+				</div>
+				<div class="content content--layout content--layout-1">
+					<svg class="content__img content__img--1" width="896" height="1344" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 896 1344">
+					  <defs>
+					    <filter id="displacementFilter">
+					      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="3" result="noise" />
+					      <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G" />
+					    </filter>
+					    <mask id="circleMask">
+					      <circle cx="50%" cy="50%" r="0" data-value-final="820" fill="white" class="mask" style="filter: url(#displacementFilter);" />
+					    </mask>
+					  </defs>
+					  <image xlink:href="img/1.jpg" width="896" height="1344" mask="url(#circleMask)" />
+					</svg>
+					<p class="content__text">As darkness cloaked the forsaken city, the crew huddled together, their eyes darting nervously into the murky abyss.</p>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="title-wrap">
+						<span class="title title--up">Storm</span>
+						<span class="title title--down">Born</span>
+					</div>
+				</div>
+				<div class="content content--layout content--layout-2">
+					<svg class="content__img content__img--2" width="1000" height="450" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 450">
+					  <defs>
+					    <filter id="displacementFilter2">
+					      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="1" result="noise" />
+					      <feDisplacementMap in="SourceGraphic" in2="noise" result="displacement" scale="100" xChannelSelector="R" yChannelSelector="G" />
+						  <feMorphology operator="dilate" radius="2" result="morph" in="displacement"/>
+					    </filter>
+					    <mask id="circleMask2">
+					      <circle cx="50%" cy="50%" r="0" data-value-final="950" fill="white" class="mask" style="filter: url(#displacementFilter2);" />
+					    </mask>
+					  </defs>
+					  <image xlink:href="img/2.jpg" width="1000" height="450" mask="url(#circleMask2)" />
+					</svg>
+					<p class="content__text">The skies above were tinged with an otherworldly hue, casting an eerie glow on the jagged rock formations below.</p>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="title-wrap">
+						<span class="title title--up">Hind</span>
+						<span class="title title--down">Sight</span>
+					</div>
+				</div>
+				<div class="content content--layout content--layout-3">
+					<svg class="content__img content__img--3" width="1000" height="560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 560">
+					  <defs>
+					    <filter id="displacementFilter3">
+					      <feTurbulence type="fractalNoise" baseFrequency="0.02" numOctaves="3" result="noise" />
+					      <feDisplacementMap in="SourceGraphic" in2="noise" scale="80" result="displacement" xChannelSelector="R" yChannelSelector="G" />
+					    </filter>
+					    <mask id="pathMask">
+							<path d="M 0 280 Q 500 280 1000 280 Q 500 280 0 280" data-value-final="M 0 280 Q 500 800 1000 280 Q 500 -200 0 280" fill="white" class="mask" style="filter: url(#displacementFilter3);"/>
+					    </mask>
+					  </defs>
+					  <image xlink:href="img/3.jpg" width="1000" height="560" mask="url(#pathMask)" />
+					</svg>
+					<p class="content__text">The Forbidden Planet was not merely an ancient world lost to time—it was a prison, a gateway to realms beyond their understanding. They had unwittingly set loose a force that threatened not only their lives but the very fabric of the universe itself. The desert planet, a riddle waiting to be unraveled, held its secrets close, leaving the crew with a lingering sense of awe and dread, a constant reminder of their insignificance in the face of an unforgiving universe.</p>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="title-wrap">
+						<span class="title title--up">Heart</span>
+						<span class="title title--down">Ache</span>
+					</div>
+				</div>
+				<div class="content content--layout content--layout-4">
+					<svg class="content__img content__img--4" width="1400" height="560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1400 560">
+					  <defs>
+					    <filter id="displacementFilter4">
+					      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="1" result="noise" />
+					      <feDisplacementMap in="SourceGraphic" in2="noise" scale="50" xChannelSelector="R" yChannelSelector="G" />
+					    </filter>
+					    <mask id="circleMask4">
+					      <circle cx="50%" cy="50%" r="0" data-value-final="770" fill="white" class="mask" style="filter: url(#displacementFilter4);" />
+					    </mask>
+					  </defs>
+					  <image xlink:href="img/4.jpg" width="1400" height="560" mask="url(#circleMask4)" />
+					</svg>
+					<p class="content__text">Sandstorms raged across the barren landscape, their fury obscuring the horizon and leaving a veil of gritty particles that stung the skin. The sun, a distant orb of fiery intensity, cast an unforgiving glare that scorched the unforgiving land.</p>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="title-wrap">
+						<span class="title title--up">Night</span>
+						<span class="title title--down">Fall</span>
+					</div>
+				</div>
+				<div class="content content--layout content--layout-5">
+					<svg class="content__img content__img--5" width="680" height="920" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 680 920">
+					  <defs>
+					    <filter id="displacementFilter5">
+					      <feTurbulence type="fractalNoise" baseFrequency="0.1" numOctaves="3" result="noise" />
+					      <feDisplacementMap in="SourceGraphic" in2="noise" scale="150" xChannelSelector="R" yChannelSelector="G" />
+					    </filter>
+					    <mask id="circleMask5">
+					      <circle cx="50%" cy="50%" r="0" data-value-final="580" fill="white" class="mask" style="filter: url(#displacementFilter5);" />
+					    </mask>
+					  </defs>
+					  <image xlink:href="img/5.jpg" width="680" height="920" mask="url(#circleMask5)" />
+					</svg>
+					<p class="content__text">From the shadows, strange shapes began to emerge, haunting figures that seemed to materialize from the very fabric of the night.</p>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="title-wrap">
+						<span class="title title--up">Fire</span>
+						<span class="title title--down">Storm</span>
+					</div>
+				</div>
+				<div class="content content--layout content--layout-6">
+					<svg class="content__img content__img--6" width="1000" height="1000" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1000 1000">
+					  <defs>
+					    <filter id="displacementFilter6">
+						  <feTurbulence type="fractalNoise" baseFrequency="0.01" numOctaves="3" result="noise" />
+						  <feDisplacementMap in="SourceGraphic" in2="noise" result="displacement" scale="150" xChannelSelector="R" yChannelSelector="G" />
+						  <feGaussianBlur in="displacement" stdDeviation="10" /> 
+					    </filter>
+					    <mask id="circleMask6">
+					      <circle cx="50%" cy="50%" r="0" data-value-final="720" fill="white" class="mask" style="filter: url(#displacementFilter6);" />
+					    </mask>
+					  </defs>
+					  <image xlink:href="img/6.jpg" width="1000" height="1000" mask="url(#circleMask6)" />
+					</svg>
+					<p class="content__text">Visions of a vibrant world, once teeming with life, flickered in her mind's eye, only to be devoured by the relentless sands of time.</p>
+				</div>
+			</div>
+			<div class="content-wrap">
+				<div class="content">
+					<div class="title-wrap">
+						<span class="title title--up">Star</span>
+						<span class="title title--down">Light</span>
+					</div>
+				</div>
+				<div class="content content--layout content--layout-7">
+					<svg class="content__img content__img--7" width="1400" height="560" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1400 560">
+					  <defs>
+					    <filter id="displacementFilter7">
+					      <feTurbulence type="fractalNoise" baseFrequency="0.03" numOctaves="1" result="noise" />
+					      <feDisplacementMap in="SourceGraphic" in2="noise" scale="120" xChannelSelector="R" yChannelSelector="G" />
+					    </filter>
+					    <mask id="circleMask7">
+					      <circle cx="50%" cy="50%" r="0" data-value-final="770" fill="white" class="mask" style="filter: url(#displacementFilter7);" />
+					    </mask>
+					  </defs>
+					  <image xlink:href="img/7.jpg" width="1400" height="560" mask="url(#circleMask7)" />
+					</svg>
+					<p class="content__text">The desert world had claimed another fragment of history, another chapter buried beneath the sands of oblivion.</p>
+				</div>
+			</div>
+			<div class="content">
+				<h2 class="content__title">More you might like</h2>
+				<div class="card-wrap">
+					<div class="card">
+						<a href="http://tympanus.net/Development/GridToSlider/" class="card__image" style="background-image:url(https://tympanus.net/codrops/wp-content/uploads/2023/05/gridtoslider_feat.jpg)"></a>
+						<h3 class="card__title"><a href="http://tympanus.net/Development/GridToSlider/">Ideas for Grid to Slideshow Switch Animations</a></h3>
+					</div>
+					<div class="card">
+						<a href="http://tympanus.net/Development/OnScrollTypographyAnimations/" class="card__image" style="background-image:url(https://tympanus.net/codrops/wp-content/uploads/2023/01/OnScrollTypographyAnimations__feat.jpg)"></a>
+						<h3 class="card__title"><a href="http://tympanus.net/Development/OnScrollTypographyAnimations/">Ideas for Grid to Slideshow Switch Animations</a></h3>
+					</div>
+					<div class="card">
+						<a href="http://tympanus.net/Development/ScrollPanels/" class="card__image" style="background-image:url(https://tympanus.net/codrops/wp-content/uploads/2022/10/ScrollPanels_featured.jpg)"></a>
+						<h3 class="card__title"><a href="http://tympanus.net/Development/ScrollPanels/">Smooth Panel Scroll Effects</a></h3>
+					</div>
+				</div>
+			</div>
+			<p class="credits">Made by <a href="https://twitter.com/codrops">@codrops</a></p>
+		</main>
+		<script src="https://tympanus.net/codrops/adpacks/cda_sponsor.js"></script>
+		<script src="js/gsap.min.js"></script>
+		<script src="js/Flip.min.js"></script>
+		<script src="js/ScrollTrigger.min.js"></script>
+		<script src="js/lenis.min.js"></script>
+		<script type="module" src="js/index.js"></script>
+	</body>
+</html>
